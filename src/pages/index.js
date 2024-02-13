@@ -7,7 +7,7 @@ import Profile from './components/profile'
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Profile />
+        <Profile /> 
     </div>
   )
 }
