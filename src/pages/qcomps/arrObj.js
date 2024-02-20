@@ -9,8 +9,9 @@ const initialList = [
 
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
-  const [yourList, setYourList] = useState(
-    initialList
+  const [yourList, setYourList] = useState( initialList.map((i) => {
+    return {...i}
+  })
   );
 
   function handleToggleMyList(artworkId, nextSeen) {

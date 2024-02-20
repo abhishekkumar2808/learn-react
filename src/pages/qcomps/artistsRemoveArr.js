@@ -11,6 +11,11 @@ export default function List() {
     initialArtists
   );
 
+  const deleteArtist = (id) =>{
+
+    setArtists( artists.filter((a) => a.id !== id))
+  }
+
   return (
     <>
       <h1>Inspiring sculptors:</h1>
@@ -18,9 +23,8 @@ export default function List() {
         {artists.map(artist => (
           <li key={artist.id}>
             {artist.name}{' '}
-            <button onClick={() => {
-              artists.splice(artist.id, 1)
-            }}>
+            <button onClick={() => deleteArtist(artist.id)} 
+            >
               Delete
             </button>
           </li>
