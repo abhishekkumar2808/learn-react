@@ -12,12 +12,14 @@ import Profile from './components/profile'
 // import FeedbackForm from './qcomps/thankYouCrash'
 import BucketList from './qcomps/arrObj'
 import Form from './qcomps/stuckForm'
+import List from './components/artistsArr'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Form/>
-        {/* <BucketList /> */}
+
+        <BucketList />
+        {/* <List/> */}
     </div>
   )
 }
